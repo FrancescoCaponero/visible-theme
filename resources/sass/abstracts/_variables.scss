@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Main black 
+/// @type Color
+$black-main-color: #000000 !default;
+
+/// Main blueish color
+/// @type Color
+$blueish-color: #ECEDFF !default;
+
+/// Main white 
+/// @type Color
+$light-grey: #ffffff !default;
+
+
+
+/// BRAND VIOLET PALETTE
+/// @type Color
+$bright-violet: #6D00FF !default;
+
+/// @type Color
+$mid-bright-violet: #6d00ffbf !default;
+
+/// @type Color
+$light-violet: #6d00ff80 !default;
+
+/// @type Color
+$extra-light-violet: #6d00ff26 !default;
+
+
+
+
+/// BRAND VIOLET PALETTE DARK #1
+
+/// @type Color
+$first-dark-violet: #1E174A !default;
+
+/// @type Color
+$second-dark-violet: #06002ab3 !default;
+
+
+
+/// BRAND VIOLET PALETTE DARK #2
+
+/// @type Color
+$fourth-dark-violet: #2D2561 !default;
+
+/// @type Color
+$fifth-dark-violet: #2d2561bf !default;
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+/// font sizes
+// For CABINET GROTESK
+
+$HUGE-CG-size: 5rem;         // 80px
+$H1-CG-size: 3.875rem;       // 62px
+$H2-CG-size: 3rem;           // 48px
+$H2lil-CG-size: 2.375rem;    // 38px
+$H3-CG-size: 2rem;           // 32px
+$H4-CG-size: 1.625rem;       // 26px
+$H5-CG-size: 1.5rem;         // 24px
+$H6-CG-size: 1.25rem;        // 20px
+$p-CG-size: 1.125rem;        // 18px
+$nav-menu-CG-size: 0.875rem; // 14px
+
+// For READACTION 50
+
+$HUGE-R50-size: 5rem;         // 80px
+$H1-R50-size: 3.875rem;       // 62px
+$H2-R50-size: 2.375rem;       // 38px
+$H3-R50-size: 2rem;           // 32px
+$H4-R50-size: 1.625rem;       // 26px
+$H5-R50-size: 1.5rem;         // 24px
+$H6-R50-size: 1.25rem;        // 20px
+$p-R50-size: 1.125rem;        // 18px
+$nav-menu-R50-size: 0.875rem; // 14px
+
+// For READACTION 50 italic
+
+$H3-R50ita-size: 0.984;       // 15.75px
+
+
+//nav distances menu items
+$long-ds-menu: 1.875rem;          //30px
+$mid-ds-menu: 1.813rem;          //29px
+$short-ds-menu: 1.781rem;        //28.5px
+$shorter-ds-menu: 1.563rem;        //25px
+

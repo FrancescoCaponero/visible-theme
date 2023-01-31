@@ -1,0 +1,36 @@
+    .header-black{
+        .main-navigation{
+            color: black;
+            &__container{
+                &--logo-link{
+                    svg{
+                        g{
+                            path{
+                                fill: black;
+                            }
+                        }
+                    }
+                }
+                &--menu-items{
+                    .nav-menu{
+                        ul{
+                            li{
+                                @include a-animation-black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .searchform{
+            .custom-form{
+                button{
+                    svg{
+                        circle,line{
+                            stroke: black;
+                        }
+                    }
+                }
+            }
+        }
+    }

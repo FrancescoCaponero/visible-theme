@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+ .site-header{
+    width: 100vw;
+    padding: 1.938rem 1.375rem 2.25rem 1.938rem; //top right bottom left
+    .main-navigation{
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+            &--menu-items{
+                display: flex;
+                .nav-menu{
+                    ul{
+                        display: flex;
+
+                        li{
+                            list-style-type: none;
+                            
+                            &:first-child{
+                                margin-right: $mid-ds-menu;
+                            }
+                            &:nth-child(2){
+                                margin-right: $mid-ds-menu;
+                            }
+                            &:nth-child(3){
+                                margin-right: $shorter-ds-menu;
+                            }
+                            &:nth-child(4){
+                                margin-right: $long-ds-menu;
+                            }
+                            &:nth-child(5){
+                                margin-right: $long-ds-menu;
+                            }
+                            &:nth-child(6){
+                                margin-right: $long-ds-menu;
+                            }
+                            &:nth-child(7){
+                                margin-right: $long-ds-menu;
+                            }
+                            &:last-child{
+                                margin-right: $mid-ds-menu;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+ }

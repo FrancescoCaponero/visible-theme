@@ -1,0 +1,1 @@
+Questa cartella deve contenere tutti i template di pagina

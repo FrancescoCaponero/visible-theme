@@ -1,0 +1,55 @@
+.searchform{
+    .custom-form{
+        display: flex;
+        input{
+            margin-right: 2.906rem;
+            background-color: transparent;
+            border: none;
+            position: relative;
+            transition: all .3s ease-in-out;
+            
+            &:focus{
+                outline: none;
+                color: white;
+                &::placeholder {
+                    color: transparent;
+                  }
+            }
+            &:focus-visible{
+                color: white;
+            }
+            &::placeholder{
+                transition: all .3s ease-in-out;
+                font-size: $nav-menu-CG-size;
+                box-shadow: none;
+                color: white;
+                text-align: right;
+            }
+
+        }
+        button{
+            transform: translateY(2.075px);
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+    }
+}
+
+.active-input{
+    display: block;
+    opacity: 1;
+    position: relative;
+    transition: all .3s ease-in-out;
+   
+}
+.hidden-input{
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+.active{
+opacity: 1;}
+.hidden{
+opacity: 0;}
+
