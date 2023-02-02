@@ -18,6 +18,18 @@
 
 /*=====  End of FIND & REPLACE VARIABLE  ======*/
 
+//taxonomies
+
+/* 
+Climate Crisis
+Gender&Queer Based Violence 
+Social Justice 
+Rural & Food Politics Gentrifcation 
+Indigenous Rights 
+Policies of Care 
+Social Design 
+Pedagogy and Education
+ */
 
 /*============================================
 =            ACTION & FILTER LIST            =

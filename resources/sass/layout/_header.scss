@@ -4,7 +4,10 @@
 
  .site-header{
     width: 100vw;
-    padding: 1.938rem 1.375rem 2.25rem 1.938rem; //top right bottom left
+    padding: 1.938rem $pad-lateral 2.25rem $pad-lateral; 
+    height: 9.375rem;
+
+      position: fixed;  
     .main-navigation{
         &__container{
             display: flex;

@@ -130,9 +130,7 @@ function MR_custom_post_parliaments() {
 	// 			'create_posts'           => FALSE,
 	//   ),
 	'map_meta_cap' => true,
-	'rewrite'		=> array('slug' => 'parliaments'),
-    'show_in_rest'       => true
-
+	'rewrite'		=> array('slug' => 'parliaments')
   );
   register_post_type( 'parliaments', $args ); 
 }

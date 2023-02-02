@@ -109,7 +109,7 @@ function MR_custom_post_fellowship() {
     'public'        => true,
 	'exclude_from_search' => false,
     'menu_position' => 8,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    'supports' => array( 'title', 'thumbnail', 'excerpt'),
     'has_archive'   => true,
     'exclude_from_search' => FALSE,
 	'menu_icon'		=> 'dashicons-awards',
@@ -131,7 +131,6 @@ function MR_custom_post_fellowship() {
 	//   ),
 	'map_meta_cap' => true,
 	'rewrite'		=> array('slug' => 'fellowship')
-
   );
   register_post_type( 'fellowship', $args ); 
 }

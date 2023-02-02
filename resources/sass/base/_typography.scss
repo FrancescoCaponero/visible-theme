@@ -9,3 +9,32 @@
  a{
    font-size: $nav-menu-CG-size;
  }
+
+ strong, select, option{
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  color: $bright-violet;
+ }
+
+ .lazyblock-hero-section{
+  h2{
+      font-weight: 400;
+      font-size: $H1-CG-size;
+      strong{
+          font-weight: 300;
+          font-size: $H1-CG-size;
+
+      }
+  }
+  p{
+      font-size: $H4-CG-size;
+      strong{
+          font-size: $H4-CG-size;
+      }
+  }
+  .lazyblock-hero-btn{
+      a{
+          font-size: $H4-CG-size;
+      }
+  }
+}

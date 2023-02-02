@@ -1,3 +1,45 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.vlet-btn{
+    cursor: pointer;
+    height: 4.063rem;
+    width: 14.375rem;
+    background-color: $bright-violet;
+    font-size: $p-CG-size;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+}
+.blk-btn{
+    cursor: pointer;
+    height: 4.063rem;
+    width: 14.375rem;
+    background-color: $black-main-color;
+    font-size: $p-CG-size;
+    color: $white;
+    text-transform:capitalize;
+    border: none; 
+    width: 11.813rem;
+    height: 4.125rem;
+    @include a-animation-white-already;
+
+}
+.read-more-btn-white{
+    color: white;
+    font-size: $p-CG-size;
+    border: none;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    @include a-animation-white-already;
+    
+}
+.read-more-btn-black{
+    color: black;
+    font-size: $p-CG-size;
+    border: none;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    @include a-animation-black-already;
+}

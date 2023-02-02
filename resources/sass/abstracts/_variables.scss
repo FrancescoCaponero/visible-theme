@@ -3,6 +3,9 @@
 // -----------------------------------------------------------------------------
 
 
+//standard padding left and right
+$pad-lateral: 2.063rem;
+
 /// Main black 
 /// @type Color
 $black-main-color: #000000 !default;
@@ -13,7 +16,15 @@ $blueish-color: #ECEDFF !default;
 
 /// Main white 
 /// @type Color
-$light-grey: #ffffff !default;
+$white: #ffffff !default;
+
+/// Main opac 0 
+/// @type Color
+$opac0: rgba(255, 255, 255, 0) !default;
+
+/// Main page linear color background
+/// @type Color
+$page-bg: #cbc0f0 !default;
 
 
 

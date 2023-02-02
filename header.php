@@ -42,11 +42,13 @@
 				<div class="main-navigation__container--menu-items">
 					<?php
 					$page = get_page_by_title('Home');
+					$page2 = get_page_by_title('Spotlight');
 					wp_nav_menu(
 						array(
 							'theme_location' => 'Menu 1',
 							'menu_class'     => 'nav-menu',
-							'exclude' => $page->ID
+							'exclude' => implode(',', array( $page->ID, $page2->ID ))
+
 						)
 					);
 					?>

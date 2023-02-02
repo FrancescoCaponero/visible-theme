@@ -17,10 +17,17 @@
  *    See: https://code.google.com/p/chromium/issues/detail?id=457146
  */
 .hide-text {
-  overflow: hidden;
-  padding: 0; /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
+  display: none;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all .3 ease-in-out;
+}
+.show-text-anim {
+  display: block;
+  opacity: 1;
+  transition: all .3 ease-in-out;
+  transform: translateY(0px);
+
 }
 
 /**
@@ -37,4 +44,15 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+
+.item-hidden{
+  display: none;
+}
+
+
+.btn-black-hero-disappear{
+    transition: all .4s ease-in-out;
+    opacity: 0;
 }

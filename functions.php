@@ -117,6 +117,19 @@ function MR_load_scripts() {
   
 }
 
+/**
+ *
+ * lazyblock folder
+ *
+ */
+$dir = __DIR__ . '/blocks'; //la nostra cartella
+
+foreach (glob("$dir/*") as $path) {
+	if (preg_match('/\.php$/', $path)) {
+		require_once $path;
+	}
+}
+
 
 /**
  *

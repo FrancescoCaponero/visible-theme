@@ -4,9 +4,11 @@
         input{
             margin-right: 2.906rem;
             background-color: transparent;
-            border: none;
             position: relative;
             transition: all .3s ease-in-out;
+            border-top: none;
+            border-left: none;
+            border-right: none;
             
             &:focus{
                 outline: none;
@@ -41,15 +43,26 @@
     opacity: 1;
     position: relative;
     transition: all .3s ease-in-out;
+    padding: 0 4rem;
+    border-bottom: 1px solid white;
+
    
 }
 .hidden-input{
     opacity: 0;
     transition: all .3s ease-in-out;
     position: relative;
+    border-bottom: 0px solid white;
+    display: inline;
+    width: 0;
 }
 .active{
-opacity: 1;}
+    opacity: 1;
+}
+
 .hidden{
-opacity: 0;}
+    opacity: 0;
+    width: 0;
+    display: none;
+}
 

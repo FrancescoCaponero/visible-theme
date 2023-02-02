@@ -2,3 +2,79 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
+.container-page-home{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img-container{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        left: 0;
+        z-index: -1;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    .page-home{
+        background-color: white;
+        height: 4.063rem;
+        list-style: none;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3{
+            font-size: $H3-CG-size;
+            font-weight: 500;
+            line-height: 1.7rem;
+            span{
+                
+            }
+        }
+        &__select{
+            color: $bright-violet;
+            border: none;
+            position: relative;
+        }
+    }
+    .spotlight-btn-and-post{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        /* a{
+            .blk-btn{}
+        } */
+        &__txt-and-img{
+            background-color: $bright-violet;
+            display: flex;
+            align-items: center;
+            color: $white;
+            padding: 0 1.063rem 0 0.256rem;
+            width: 32.563rem;
+            height: 4.125rem;
+            &--img{
+                width: 150px;
+                img{
+                    width: fit-content;
+                }
+            }
+            &--txt{
+                p{
+                    font-size: $p-CG-size;
+                }
+            }
+            button{
+                align-self: flex-end;
+                
+            }
+        }
+    }
+}

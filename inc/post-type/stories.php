@@ -5,15 +5,15 @@
 ===============================================*/
 
 // stories			-> slug del custom post type
-// Stories	-> Slug per il rewrite
+// stories	-> Slug per il rewrite
 // MR			-> prefisso da appendere ad ogni  funzione 
 // stories		-> Textdomain per il gettext
 // Story		 	-> Nome singolare del cpt con la prima lettera maiscola
 // story		 	-> Nome singolare del cpt con la prima lettera minuscola
-// [PLUUPP]		 	-> Nome plurale del cpt con la prima lettera maiscola
-// [PLULOW]		 	-> Nome plurale del cpt con la prima lettera minuscola
+// Stories		 	-> Nome plurale del cpt con la prima lettera maiscola
+// stories		 	-> Nome plurale del cpt con la prima lettera minuscola
 // a			-> se femminile mettere "a" se maschile mettere "o"
-// i			-> se femminile mettere "e" se maschile mettere "i"
+// e			-> se femminile mettere "e" se maschile mettere "i"
 // 
 
 /*=====  End of FIND & REPLACE VARIABLE  ======*/
@@ -105,11 +105,12 @@ function MR_custom_post_stories() {
   );
   $args = array(
     'labels'        => $labels,
-    'description'   => __( 'Contiene tutti ', 'stories' ),
+    'description'   => __( 'Contiene tutte ', 'stories' ),
     'public'        => true,
 	'exclude_from_search' => false,
     'menu_position' => 8,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    // 'supports'      => array( 'title', 'thumbnail','custom-fields' ),
+    'supports'      => array( 'title', 'thumbnail' ),
     'has_archive'   => true,
     'exclude_from_search' => FALSE,
 	'menu_icon'		=> 'dashicons-awards',
@@ -130,9 +131,7 @@ function MR_custom_post_stories() {
 	// 			'create_posts'           => FALSE,
 	//   ),
 	'map_meta_cap' => true,
-	'rewrite'		=> array('slug' => 'Stories'),
-    'show_in_rest'       => true
-
+	'rewrite'		=> array('slug' => 'stories')
   );
   register_post_type( 'stories', $args ); 
 }
@@ -162,7 +161,7 @@ function MR_stories_updated_messages( $messages ) {
   $messages['stories'] = array(
     0 => '', 
     1 => sprintf( __('Story aggiornata . <a href="%s">Visualizza story</a>' ,'stories'), esc_url( get_permalink($post_ID) ) ),
-    2 => __('Dati personalizzati aggiornati.','stories'),
+    2 => __('Dati personalizzati aggiornate.','stories'),
     3 => __('Dati personalizzati cancellata.','stories'),
     4 => __('Story aggiornata.','stories'),
     5 => isset($_GET['revision']) ? sprintf( __('ripristina story a  %s','stories'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
@@ -188,9 +187,9 @@ function MR_stories_header_html() {
 
     if( !empty($post) && $post->post_type == 'stories' && $pagenow == 'edit.php' ) {
 
-        //$output = '<p>Ciao Mondo!</p>';
+        /* $output = '<p>Ciao Mondo!</p>';
 
-        echo $output;
+        echo $output; */
     }
 }
 
@@ -201,8 +200,8 @@ function MR_stories_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'id'         => 'data-expositor',
         'title'      => __( 'Contenuti Espositore', 'eicma' ),
-/*         'post_types' => array( e_news ),
- */        'context'    => 'normal',
+        
+        'context'    => 'normal',
         'priority'   => 'high',
         'fields' => array(
             array(

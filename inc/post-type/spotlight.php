@@ -109,7 +109,7 @@ function MR_custom_post_spotlight() {
     'public'        => true,
 	'exclude_from_search' => false,
     'menu_position' => 8,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    'supports' => array( 'title', 'thumbnail' ),
     'has_archive'   => true,
     'exclude_from_search' => FALSE,
 	'menu_icon'		=> 'dashicons-awards',
