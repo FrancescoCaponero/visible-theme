@@ -1,0 +1,44 @@
+.page-stories-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .page-stories-container{
+        position: relative;
+        &__img-wrap{
+            width: 100vw;
+            height: 19.625rem;
+            overflow: hidden;
+            img {
+                height: auto;
+                width: 100%;
+                transform: translateY(-25%);
+            }
+        }
+        &__text-wrap{
+            position: absolute;
+            z-index: 2;
+            top: 2rem;
+            left: $pad-lateral;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            h2{
+                font-family: 'VT323', monospace;
+                font-size: $H2-CG-size;
+                transition: all .3s ease-in-out;
+            }
+            P{
+                width: 50%;
+                transition: all .3s ease-in-out .1s;
+
+
+            }
+            button{
+                margin-top: 3rem;
+                transition: all .3s ease-in-out .2s;
+
+            }
+        }
+    }
+}

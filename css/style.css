@@ -434,6 +434,53 @@ strong, select, option {
   opacity: 0;
 }
 
+.hidden-hover-stories .page-stories-container__text-wrap h2 {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.hidden-hover-stories .page-stories-container__text-wrap p {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+.hidden-hover-stories .page-stories-container__text-wrap button {
+  opacity: 0;
+  transform: translateY(-14px);
+}
+
+.hover-stories .page-stories-container__text-wrap h2 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.hover-stories .page-stories-container__text-wrap p {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.hover-stories .page-stories-container__text-wrap button {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.item-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: all 0.2s ease-in-out;
+}
+.item-container .item-single {
+  transition: all 0.2s ease-in-out;
+}
+
+.random {
+  opacity: 0;
+}
+
 .site-header {
   width: 100vw;
   padding: 1.938rem 2.063rem 2.25rem 2.063rem;
@@ -650,7 +697,7 @@ footer .footer-right__social-bar ul li a::after {
 }
 
 .wp-block-lazyblock-herosection {
-  height: 25.938rem;
+  min-height: 25.938rem;
   background: linear-gradient(#cbc0f0, rgba(255, 255, 255, 0));
   padding: 8.344rem 2.063rem 0 2.063rem;
 }
@@ -688,7 +735,7 @@ footer .footer-right__social-bar ul li a::after {
 .blk-btn a:hover::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 70%;
   height: 1px;
@@ -698,7 +745,7 @@ footer .footer-right__social-bar ul li a::after {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -719,7 +766,7 @@ footer .footer-right__social-bar ul li a::after {
 .read-more-btn-white a:hover::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 70%;
   height: 1px;
@@ -729,7 +776,7 @@ footer .footer-right__social-bar ul li a::after {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -767,6 +814,59 @@ footer .footer-right__social-bar ul li a::after {
   background-color: black;
 }
 
+.blk-btn-small {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  background-color: #000000;
+  font-size: 1.125rem;
+  border-radius: 3px;
+  color: #ffffff;
+  text-transform: capitalize;
+  border: none;
+}
+.blk-btn-small a {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.blk-btn-small a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background-color: white;
+}
+.blk-btn-small a::after {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.searchform .active-input {
+  display: block;
+  opacity: 1;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  padding: 0 4rem;
+  border-bottom: 1px solid white;
+}
+.searchform .hidden-input {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  border-bottom: 0px solid white;
+  display: inline;
+  width: 0;
+}
 .searchform .custom-form {
   display: flex;
 }
@@ -814,22 +914,23 @@ footer .footer-right__social-bar ul li a::after {
   background: none;
 }
 
-.active-input {
-  display: block;
-  opacity: 1;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  padding: 0 4rem;
-  border-bottom: 1px solid white;
+.header-black .searchform .active-input {
+  border-bottom: 1px solid black;
 }
-
-.hidden-input {
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  border-bottom: 0px solid white;
-  display: inline;
-  width: 0;
+.header-black .searchform .hidden-input {
+  border-bottom: 0px solid black;
+}
+.header-black .searchform .custom-form input:focus {
+  color: black;
+}
+.header-black .searchform .custom-form input:focus-visible {
+  color: black;
+}
+.header-black .searchform .custom-form input::-moz-placeholder {
+  color: black;
+}
+.header-black .searchform .custom-form input::placeholder {
+  color: black;
 }
 
 .active {
@@ -860,7 +961,9 @@ footer .footer-right__social-bar ul li a::after {
 }
 .container-page-home__img-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container-page-home .page-home {
   background-color: white;
@@ -901,6 +1004,8 @@ footer .footer-right__social-bar ul li a::after {
 }
 .container-page-home .spotlight-btn-and-post__txt-and-img--img {
   width: 150px;
+  height: 50px;
+  overflow: hidden;
 }
 .container-page-home .spotlight-btn-and-post__txt-and-img--img img {
   width: -moz-fit-content;
@@ -911,4 +1016,46 @@ footer .footer-right__social-bar ul li a::after {
 }
 .container-page-home .spotlight-btn-and-post__txt-and-img button {
   align-self: flex-end;
+}
+
+.page-stories-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.page-stories-wrapper .page-stories-container {
+  position: relative;
+}
+.page-stories-wrapper .page-stories-container__img-wrap {
+  width: 100vw;
+  height: 19.625rem;
+  overflow: hidden;
+}
+.page-stories-wrapper .page-stories-container__img-wrap img {
+  height: auto;
+  width: 100%;
+  transform: translateY(-25%);
+}
+.page-stories-wrapper .page-stories-container__text-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 2rem;
+  left: 2.063rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.page-stories-wrapper .page-stories-container__text-wrap h2 {
+  font-family: "VT323", monospace;
+  font-size: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+.page-stories-wrapper .page-stories-container__text-wrap P {
+  width: 50%;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.page-stories-wrapper .page-stories-container__text-wrap button {
+  margin-top: 3rem;
+  transition: all 0.3s ease-in-out 0.2s;
 }

@@ -18,7 +18,8 @@
         z-index: -1;
         img{
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
     }
     
@@ -34,9 +35,6 @@
             font-size: $H3-CG-size;
             font-weight: 500;
             line-height: 1.7rem;
-            span{
-                
-            }
         }
         &__select{
             color: $bright-violet;
@@ -62,6 +60,8 @@
             height: 4.125rem;
             &--img{
                 width: 150px;
+                height: 50px;
+                overflow: hidden;
                 img{
                     width: fit-content;
                 }

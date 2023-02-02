@@ -53,6 +53,31 @@ jQuery(document).ready(function($){
             spanNext.next('p').addClass('show-text-anim');
             $(".read-more-btn-black").addClass('btn-black-hero-disappear');
         });
+        const pageStoriesContainer = $('.page-stories-container');
 
+
+        pageStoriesContainer.addClass('hidden-hover-stories')
+        pageStoriesContainer.each(function(e) {
+            $( this ).hover(
+                function() {
+                    $( this ).removeClass( "hidde-hover-stories" );
+                    $( this ).addClass( "hover-stories" );
+                    myColorData = $( this ).children().children("span").data();
+                    myColorDataString = myColorData.color;
+
+                    $(this).append("<div class='item-container'>");
+                    for (var j = 0; j < 42; j++) {
+                        $(this).find(".item-container").append("<div class='item-single' style=background-color:"+myColorDataString+";></div>");
+                        if (Math.random() < 0.07) {
+                            $(this).find(".item-single").last().addClass("random");
+                        }                                                 
+                      }
+                }, function() {
+                    $( this ).removeClass( "hover-stories" );
+                    $( this ).addClass( "hidden-hover-stories");
+                    $(this).find(".item-container").remove();
+                }
+              );
+          });
 
 });

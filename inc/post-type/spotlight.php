@@ -188,7 +188,6 @@ function MR_spotlight_header_html() {
 
         //$output = '<p>Ciao Mondo!</p>';
 
-        echo $output;
     }
 }
 

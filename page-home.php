@@ -2,7 +2,9 @@
     get_header();
     $args = array(
     'post_type' => 'stories',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'orderby' => 'meta_value',
+	'order' => 'ASC'
     );
     $cpt_posts = new WP_Query( $args );
     ?>
@@ -35,7 +37,7 @@
             <button class='blk-btn'>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'spotlight' ) ) ); ?>">
                 Discover All Spotlights
-                </a>
+            </a>
             </button>
         
         <?php
