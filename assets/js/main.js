@@ -5,9 +5,12 @@ jQuery(document).ready(function($){
     const searchInput = $('.custom-form input');
     const navMenuExcept = $('.site-header .main-navigation .main-navigation__container .main-navigation__container--menu-items .nav-menu ul li').not('li:nth-child(4)');
 
-
+    var clicked = false;
     $('#searchsubmit').click(function(e) {
-        e.preventDefault();
+        if (!clicked) {
+            e.preventDefault();
+            clicked = true;
+        }    
         searchLabel.toggleClass('active-input hidden-input');
         searchInput.toggleClass('active-input hidden-input');
         if ((searchLabel && searchInput).hasClass('active-input')) {
@@ -65,17 +68,24 @@ jQuery(document).ready(function($){
                     myColorData = $( this ).children().children("span").data();
                     myColorDataString = myColorData.color;
 
-                    $(this).append("<div class='item-container'>");
-                    for (var j = 0; j < 42; j++) {
-                        $(this).find(".item-container").append("<div class='item-single' style=background-color:"+myColorDataString+";></div>");
-                        if (Math.random() < 0.07) {
+                    $(this).append("<div class='item-container-first' style=background-color:"+myColorDataString+">");
+                    $(this).append("<div class='item-container-second'>");
+                    for (var j = 0; j < 24; j++) {
+                        $(this).find(".item-container-second").append("<div class='item-single' style=background-color:"+myColorDataString+";></div>");
+                        if (Math.random() < 0.25) {
                             $(this).find(".item-single").last().addClass("random");
+                        }                                                 
+                        if (Math.random() < 0.15) {
+                            $(this).find(".item-single").last().addClass("random2");
                         }                                                 
                       }
                 }, function() {
                     $( this ).removeClass( "hover-stories" );
                     $( this ).addClass( "hidden-hover-stories");
-                    $(this).find(".item-container").remove();
+                    $target1 = $(this).find(".item-container-first");
+                    $target2 = $(this).find(".item-container-second");
+                    $target1.fadeOut(400, function(){ $target1.remove(); });
+                    $target2.fadeOut(200, function(){ $target2.remove(); });
                 }
               );
           });

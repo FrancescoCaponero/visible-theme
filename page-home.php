@@ -53,7 +53,7 @@
         if ( $latest_post->have_posts() ) {
             while ( $latest_post->have_posts() ) {
                 $latest_post->the_post();
-                $images = rwmb_meta( 'image_m0xrdw1sr2d', ['size' => 'thumbnail'] );
+                $images = rwmb_meta( 'image-spotlight', ['size' => 'large'] );
                 $image = reset( $images );
                 ?>
                 <div class="spotlight-btn-and-post__txt-and-img">

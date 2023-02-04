@@ -96,25 +96,57 @@
 }
 
 //grid sistem for stories
-
-.item-container{
-  width: 100%;
+.item-container-first{
+  width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  animation: anim-slow-in .3s ease-in-out;
+  transition: all .2s ease-in-out;
+
+}
+.item-container-second{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
   display: grid;
   overflow: hidden;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   transition: all .2s ease-in-out;
 
+
   .item-single{
     transition: all .2s ease-in-out;   
+
   }
 }
 
 .random{
   opacity: 0;
+  animation: anim-slow-in .2s ease-in-out;
+  transition: all .2s ease-in-out;   
+
+
+}
+.random2{
+  opacity: 0;
+  animation: anim-slow-in .25s ease-in-out .1s;
+  transition: all .2s ease-in-out;   
+
+
+}
+
+@keyframes anim-slow-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

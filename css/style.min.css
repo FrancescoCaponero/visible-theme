@@ -381,6 +381,10 @@ strong, select, option {
   font-size: 1.625rem;
 }
 
+.page-spotlight h2 {
+  font-family: "VT323", monospace;
+}
+
 /**
  * Clear inner floats
  */
@@ -460,27 +464,54 @@ strong, select, option {
   transform: translateY(0px);
 }
 
-.item-container {
-  width: 100%;
+.item-container-first {
+  width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  animation: anim-slow-in 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.item-container-second {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
   display: grid;
   overflow: hidden;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   transition: all 0.2s ease-in-out;
 }
-.item-container .item-single {
+.item-container-second .item-single {
   transition: all 0.2s ease-in-out;
 }
 
 .random {
   opacity: 0;
+  animation: anim-slow-in 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
+.random2 {
+  opacity: 0;
+  animation: anim-slow-in 0.25s ease-in-out 0.1s;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes anim-slow-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .site-header {
   width: 100vw;
   padding: 1.938rem 2.063rem 2.25rem 2.063rem;
@@ -1058,4 +1089,93 @@ footer .footer-right__social-bar ul li a::after {
 .page-stories-wrapper .page-stories-container__text-wrap button {
   margin-top: 3rem;
   transition: all 0.3s ease-in-out 0.2s;
+}
+
+.page-spotlight {
+  background: linear-gradient(rgb(236, 237, 255) 5%, rgba(236, 237, 255, 0.5) 52%, rgba(236, 237, 255, 0) 78%);
+}
+.page-spotlight .page-spotlight-wrapper-single .page-spotlight-post-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.page-spotlight .page-spotlight-wrapper-single .page-spotlight-post-single__img-wrap {
+  min-width: 50vw;
+  height: 100vh;
+}
+.page-spotlight .page-spotlight-wrapper-single .page-spotlight-post-single__img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page-spotlight .page-spotlight-wrapper-single .page-spotlight-post-single__text-wrap {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-spotlight .page-spotlight-wrapper-single .page-spotlight-post-single__text-wrap--title {
+  color: #6D00FF;
+}
+.page-spotlight .page-spotlight-wrapper-single .page-spotlight-post-single__text-wrap--date {
+  color: #9B64D4;
+}
+.page-spotlight .page-spotlight-wrapper-remain {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain {
+  border-radius: 4.5px;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 7.5px 30px rgba(109, 0, 255, 0.25);
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain:nth-child(even) > .page-spotlight-post-remain__title {
+  order: 1;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain:nth-child(even) > .page-spotlight-post-remain__subtitle {
+  order: 2;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain:nth-child(even) > .page-spotlight-post-remain__img-wrap {
+  order: 3;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain:nth-child(even) > .page-spotlight-post-remain__taxonomies {
+  order: 4;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain:nth-child(even) > .page-spotlight-post-remain__date {
+  order: 5;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain__img-wrap {
+  width: 342px;
+  height: 219px;
+  order: 1;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain__img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain__title {
+  color: #6D00FF;
+  order: 2;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain__subtitle {
+  order: 3;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain__taxonomies {
+  order: 4;
+}
+.page-spotlight .page-spotlight-wrapper-remain .page-spotlight-post-remain__date {
+  color: #9B64D4;
+  order: 5;
 }

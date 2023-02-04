@@ -18,7 +18,7 @@
 	
 </head>
 <body <?php body_class() ?>>
-	<header class="site-header header<?= is_page(array('home', 'streaming', 'spotlight', 'stories', 'parliaments')) ? '-white' : '-black'; ?>" >
+	<header class="site-header header<?= is_page(array('home', 'streaming', 'page-spotlight', 'page-stories', 'parliaments')) ? '-white' : '-black'; ?>" >
 		<nav id="site-navigation" class="main-navigation">
 			<div class="main-navigation__container">
 				<a class="main-navigation__container--logo-link" href="<?php echo home_url(); ?>">
