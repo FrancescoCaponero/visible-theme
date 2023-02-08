@@ -3,6 +3,7 @@
 // 1. Configuration and helpers
 @import
   'abstracts/header-requirements',
+  'abstracts/viewports',
   'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins';
@@ -16,6 +17,7 @@
   'base/base',
   'base/fonts',
   'base/typography',
+  'base/header-classes',
   'base/helpers';
 
 // 4. Layout-related sections
@@ -29,13 +31,15 @@
 // 5. Components
 @import
   'components/button',
-  'components/searchform';
+  'components/searchform',
+  'components/taxonomies';
 
 // 6. Page-specific styles
 @import
   'pages/home',
   'pages/page-stories',
-  'pages/page-spotlight';
+  'pages/page-spotlight',
+  'pages/single-spotlight';
 
 // 7. Themes
 @import

@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains viewports functions
+// -----------------------------------------------------------------------------
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+   @media (max-width: 375px) {
+       @content;
+   }
+  }
+  @if $breakpoint == s {
+   @media (max-width: 414px) {
+       @content;
+   }
+  }
+   @if $breakpoint == tab-port {
+    @media (max-width: 768px){
+         @content;
+    }
+   }
+   @if $breakpoint == mid-desktop {
+    @media (max-width: 1440px){
+         @content;
+    }
+   }
+   @if $breakpoint == big-desktop {
+    @media (min-width: 1440px){
+         @content;
+    }
+   }
+}
+
+/// HOW TO USE
+/* @include respond(mobile) {
+        //codice
+    }
+ */

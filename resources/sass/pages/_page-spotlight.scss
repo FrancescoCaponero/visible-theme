@@ -6,64 +6,72 @@
         .page-spotlight-post-single{
            display: flex;
            justify-content: center;
-           align-items: center;
-           height: 100vh;
-        
             &__img-wrap{
-                min-width: 50vw;
+                min-width: calc(50vw + 4.875rem);
                 height: 100vh;
                 img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-
                 }
             }
             &__text-wrap{
-                width: 50vw;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                margin-left: 9.188rem;
+               
+
                 &--title{
                     color: $bright-violet;
                 }
                 &--date{
+                    margin-top: 1.531rem;
                     color: $lighty-violet;
                 }
                 &--subtitle{
-
+                    margin-top: 3.656rem;
                 }
                 &--taxonomies{
-
+                    color: inherit;
                 } 
+                button{
+                    margin-top: 2.531rem;
+                }
             }
         } 
     }
     .page-spotlight-wrapper-remain{
-        width: 80vw;
+        width: calc(100% - 5%);
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 2.344rem;
+        row-gap: 1.625rem;
         justify-items: center;
         .page-spotlight-post-remain{
-            border-radius: 4.5px;
-            width: 400px;
-            height: 600px;
+            padding-left: 1.697rem;
+            padding-top: 1.419rem;
+            padding-right: 1.769rem;
+            padding-bottom: 1.863rem;
+            border-radius: 0.281rem;
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             box-shadow: 0px 7.5px 30px rgba(109, 0, 255, 0.25);
+            background-color: white;
+            width: 23.5rem;
 
             &:nth-child(even){
                 
                 & > .page-spotlight-post-remain__title {
                     order: 1;
+                    margin-top: 0;
+
                 }
                 & > .page-spotlight-post-remain__subtitle {
                     order: 2;
                 }
                 & > .page-spotlight-post-remain__img-wrap {
+                    margin-top: 2.231rem;
                     order: 3;
                 }
                 & > .page-spotlight-post-remain__taxonomies {
@@ -75,8 +83,10 @@
             }
 
             &__img-wrap{
-                width: 342px;
-                height: 219px;
+                width: 324px;
+                min-height: 150px;
+                overflow: hidden;
+                border-radius: 4.5px;
                 order: 1;
                 img{
                     width: 100%;
@@ -85,19 +95,40 @@
                 }
             }
             &__title{
-                color: $bright-violet;
                 order: 2;
+                align-self: flex-start;
+                margin-top: 2.231rem;
             }
             &__subtitle{
                 order: 3;
+                align-self: flex-end;
+                width: 80%;
+                margin-top: 2.231rem;
+
             }            
             &__taxonomies{
                 order: 4;
+                margin-bottom: 0;
+                margin-top: 10px;
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    gap: 5px;
+                }
             }
             &__date{
+                margin-bottom: 0;
+                margin-top: 17px;
                 color: $lighty-violet;
                 order: 5;
+                align-self: flex-start;
             }
          }
+    }
+    .load-more-spotlight{
+        margin: 0 auto;
+        margin-top: 3.75rem ;
+        margin-bottom: 3.125rem;
     }
 }

@@ -15,6 +15,7 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
+ 
 *,
 *::before,
 *::after {
@@ -24,9 +25,16 @@ html {
 }
 
 /**
- * Basic styles for links
+ * Basic styles for links and list
  */
+ 
 a {
   text-decoration: none;
   color: inherit;
 }
+ul{
+  list-style: none;
+}
+
+
+

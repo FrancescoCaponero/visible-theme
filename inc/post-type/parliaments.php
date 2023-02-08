@@ -111,8 +111,7 @@ function MR_custom_post_parliaments() {
     'menu_position' => 8,
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     'has_archive'   => true,
-    'exclude_from_search' => FALSE,
-	'menu_icon'		=> 'dashicons-awards',
+	'menu_icon'		=> 'dashicons-welcome-learn-more',
 	// 'capabilities' => array(
 	// 			'edit_post'	 => "edit_parliaments",
 	// 			'read_post'		 => "read_parliaments",
@@ -188,7 +187,6 @@ function MR_parliaments_header_html() {
 
         //$output = '<p>Ciao Mondo!</p>';
 
-        echo $output;
     }
 }
 

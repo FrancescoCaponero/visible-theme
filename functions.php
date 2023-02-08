@@ -247,5 +247,26 @@ function custom_search_form( $form ) {
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
+add_filter( 'rwmb_meta_boxes', 'prefix_register_meta_boxes' );
+function prefix_register_meta_boxes( $meta_boxes ) {
+    $meta_boxes[] = array(
+        'title'      => __( 'Image and Caption', 'hl_theme' ),
+        'post_types' => array( 'anyway' ),
+        'fields'     => array(
+            array(
+                'id'   => 'image',
+                'name' => __( 'Image', 'hl_theme' ),
+                'type' => 'file',
+            ),
+            array(
+                'id'   => 'caption',
+                'name' => __( 'Caption', 'hl_theme' ),
+                'type' => 'text',
+            ),
+        ),
+    );
+    return $meta_boxes;
+}
+
 
 ?>

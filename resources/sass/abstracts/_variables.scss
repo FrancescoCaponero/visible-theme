@@ -63,6 +63,11 @@ $fourth-dark-violet: #2D2561 !default;
 /// @type Color
 $fifth-dark-violet: #2d2561bf !default;
 
+/// date violet
+$date-spotlight-violet: #9457D0 !default;
+/// single spotlight violet subtitle
+$subtitle-spotlight-violet: #6D00FF !default;
+
 
 
 /// Container's maximum width
@@ -72,18 +77,6 @@ $max-width: 1180px !default;
 
 
 
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
-
-
-/// font sizes
 // For CABINET GROTESK
 
 $HUGE-CG-size: 5rem;         // 80px
@@ -96,6 +89,8 @@ $H5-CG-size: 1.5rem;         // 24px
 $H6-CG-size: 1.25rem;        // 20px
 $p-CG-size: 1.125rem;        // 18px
 $nav-menu-CG-size: 0.875rem; // 14px
+
+
 
 // For READACTION 50
 
@@ -113,10 +108,40 @@ $nav-menu-R50-size: 0.875rem; // 14px
 
 $H3-R50ita-size: 0.984;       // 15.75px
 
-
 //nav distances menu items
 $long-ds-menu: 1.875rem;          //30px
 $mid-ds-menu: 1.813rem;          //29px
 $short-ds-menu: 1.781rem;        //28.5px
 $shorter-ds-menu: 1.563rem;        //25px
 
+/// HEADER TYPO CENTRAL SELECT
+/// //// ///// /// //// //// //// //// ////
+// fs = font size
+// lh = line height
+// wh = weight
+
+$visible-big-fs: 2rem;
+$visible-big-lh: 2rem;
+$visible-big-wh: 500;
+
+$visible-tab-fs: 1.75rem;
+$visible-tab-lh: 2rem;
+$visible-tab-wh: 400;
+
+$visible-sm-fs: 1.63rem;
+$visible-sm-lh: 2rem;
+$visible-sm-wh: 700;
+
+// // // //
+
+$climate-big-fs: 2rem;
+$climate-big-lh: 2rem;
+$climate-big-wh: 400;
+
+$climate-tab-fs: 1.63rem;
+$climate-tab-lh: 1.75rem;
+$climate-tab-wh: 400;
+
+$climate-sm-fs: 1.75rem;
+$climate-sm-lh: 1.75rem;
+$climate-sm-wh: 400;

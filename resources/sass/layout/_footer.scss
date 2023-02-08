@@ -4,56 +4,71 @@
 
 footer{
     background-color: $blueish-color;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    padding: 1.188rem 1.536rem 2.5rem 1.938rem;
-    .footer-left{
+    .main-footer{
         display: flex;
-        flex-direction: column;
-        &__logo{
+        justify-content: space-between;
+        width: 100vw;
+        padding: 1.188rem 1.536rem 2.5rem 1.938rem;
+        max-width: 120rem;
+        margin: 0 auto;
+        .footer-left{
             display: flex;
             flex-direction: column;
-            margin-bottom: 5.784rem;
+            &__logo{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5.784rem;
 
-            svg{
-                g{
-                    path{
-                        fill: black;
+                svg{
+                    g{
+                        path{
+                            fill: black;
+                        }
+                    }
+                }
+                h3{
+                    font-size: $H3-R50ita-size;
+                    font-style: italic;
+                    font-weight: 300;
+                }
+            }
+            &__copyright-claim{
+                &--logos{
+                    display: flex;
+                    svg{
+                    &:first-child{
+                        margin-right: 3.308rem;
+                    }   
+                    }
+                    
+                }
+                &--text{
+                    color: $black-main-color;
+                    opacity: .25;
+                    font-size: $nav-menu-R50-size;
+                    margin-top: 0.934rem;
+                }
+            
+            }
+        }
+        .footer-right{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &__menu{
+                .nav-menu{
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        list-style-type: none;
+                        li{
+                            @include a-animation-black;
+                        }
                     }
                 }
             }
-            h3{
-                font-size: $H3-R50ita-size;
-                font-style: italic;
-                font-weight: 300;
-            }
-        }
-        &__copyright-claim{
-            &--logos{
-                display: flex;
-                svg{
-                 &:first-child{
-                    margin-right: 3.308rem;
-                }   
-                }
-                
-            }
-            &--text{
-                color: $black-main-color;
-                opacity: .25;
-                font-size: $nav-menu-R50-size;
-                margin-top: 0.934rem;
-            }
-           
-        }
-    }
-    .footer-right{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        &__menu{
-            .nav-menu{
+            &__social-bar{
+                margin-left: 14.188rem;
                 ul{
                     display: flex;
                     flex-direction: column;
@@ -61,19 +76,8 @@ footer{
                     li{
                         @include a-animation-black;
                     }
-                }
-            }
-        }
-        &__social-bar{
-            margin-left: 14.188rem;
-            ul{
-                display: flex;
-                flex-direction: column;
-                list-style-type: none;
-                li{
-                    @include a-animation-black;
-                }
 
+                }
             }
         }
     }

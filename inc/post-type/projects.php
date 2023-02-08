@@ -101,7 +101,7 @@ function MR_custom_post_projects() {
 	  'not_found'          => __( 'Nessuno project trovato', 'projects' ),
 	  'not_found_in_trash' => __( 'Nessuno project trovato nel cestino', 'projects' ), 
     'parent_item_colon'  => '',
-    'menu_name'          => 'Project'
+    'menu_name'          => 'Projects'
   );
   $args = array(
     'labels'        => $labels,
@@ -111,8 +111,7 @@ function MR_custom_post_projects() {
     'menu_position' => 8,
     'supports' => array( 'title', 'author', 'thumbnail' ),
     'has_archive'   => true,
-    'exclude_from_search' => FALSE,
-	'menu_icon'		=> 'dashicons-awards',
+	'menu_icon'		=> 'dashicons-screenoptions',
 	// 'capabilities' => array(
 	// 			'edit_post'	 => "edit_projects",
 	// 			'read_post'		 => "read_projects",
@@ -188,7 +187,6 @@ function MR_projects_header_html() {
 
         //$output = '<p>Ciao Mondo!</p>';
 
-        echo $output;
     }
 }
 

@@ -16,6 +16,56 @@
   color: $bright-violet;
  }
 
+
+ // Typo central hero home
+ .hero-home-central-font-black{
+    
+    @include respond(big-desktop){
+        font-size: $visible-big-fs;
+        line-height: $visible-big-lh;
+        font-weight: $visible-big-wh;
+    }
+    @include respond(mid-desktop){
+        font-size: $visible-big-fs;
+        line-height: $visible-big-lh;
+        font-weight: $visible-big-wh;
+    }
+    @include respond(tab-port){
+        font-size: $visible-tab-fs;
+        line-height: $visible-tab-lh;
+        font-weight: $visible-tab-wh;
+    }
+    @include respond(xs){
+        font-size: $visible-sm-fs;
+        line-height: $visible-sm-lh;
+        font-weight: $visible-sm-wh;
+    }
+    span{
+        @include respond(big-desktop){
+            font-size: $climate-big-fs;
+            line-height: $climate-big-lh;
+            font-weight: $climate-big-wh;
+        }
+        @include respond(mid-desktop){
+            font-size: $climate-big-fs;
+            line-height: $climate-big-lh;
+            font-weight: $climate-big-wh;
+        }
+        @include respond(tab-port){
+            font-size: $climate-tab-fs;
+            line-height: $climate-tab-lh;
+            font-weight: $climate-tab-wh;
+        }
+        @include respond(xs){
+            font-size: $climate-sm-fs;
+            line-height: $climate-sm-lh;
+            font-weight: $climate-sm-wh;
+        }
+    }
+ }
+
+ //hero-section
+
  .lazyblock-hero-section{
   h2{
       font-weight: 400;
@@ -39,8 +89,76 @@
   }
 }
 
-.page-spotlight{
+// page spotlight
+
+.page-spotlight-post-single{
+    &__text-wrap{
+        &--date{
+            font-size: $p-CG-size;
+            font-weight: 500;
+        }
+        &--subtitle{
+            font-weight: 500;
+            font-size: $H5-CG-size;
+        }
+        button{
+            text-transform: uppercase;
+        }
+    }
     h2{
         font-family: 'VT323', monospace;
+        font-size: $H1-CG-size;
+        font-weight: 400;
+    }
+}
+.page-spotlight-post-remain{
+    h2{
+        a{
+            font-family: 'VT323', monospace;
+            font-size: $H1-CG-size;
+            font-weight: 400;
+            line-height: 2.375rem;
+            color: black;
+        }
+        
+    }
+    &__subtitle{
+        font-size: $p-CG-size;
+    }
+}
+
+//taxonomies
+.term-discover-all{
+    &__single-tax{
+        font-weight: 600;
+    }
+}
+
+// single spotlight
+
+.single-spotlight-style{
+    &__righty{
+        &--taxonomies{
+            font-size: $nav-menu-R50-size;
+        }
+    }
+    &__lefty{
+        &--date{
+            font-size: $H6-R50-size;
+        }
+        &--title{
+            font-size: $H1-R50-size;
+            font-family: 'VT323', monospace;
+        }
+        &--subtitle{
+            font-family: 'VT323', monospace;
+            font-size: $H3-R50-size;
+        }
+        &--content{
+            font-size: $H6-R50-size;
+        }
+        &--socials{
+            font-size: $nav-menu-R50-size;
+        }
     }
 }

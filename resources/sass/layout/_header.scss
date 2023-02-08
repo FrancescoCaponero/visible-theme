@@ -2,13 +2,12 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
- .site-header{
+ .header-wrapper-background{
     width: 100vw;
-    padding: 1.938rem $pad-lateral 2.25rem $pad-lateral; 
-    height: 9.375rem;
-
-      position: fixed;  
+    position: fixed;  
+    z-index: 9999;
     .main-navigation{
+        margin: 0 auto;
         &__container{
             display: flex;
             justify-content: space-between;
@@ -53,6 +52,5 @@
                 }
             }
         }
-    }
-    
+    } 
  }

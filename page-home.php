@@ -13,7 +13,7 @@
             <img src="">
         </div>
 		<article class="page-home">
-            <h3>visible is <span>
+            <h3 class="hero-home-central-font-black">visible is <span>
             <select class="page-home__select">
             <?php
             if ( $cpt_posts->have_posts() ) {

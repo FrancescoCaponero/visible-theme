@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes for header
+// -----------------------------------------------------------------------------
+
+.nav-padding{
+  @include respond(big-desktop){
+  padding-top: 1.38rem;
+  padding-left: 2rem;
+  padding-right: 3.00rem;
+ }
+ @include respond(mid-desktop){
+  padding-top: 1.38rem;
+  padding-left: 1.94rem;
+  padding-right: 2.25rem;
+ }
+ @include respond(tab-port){
+  padding-top: 1.31rem;
+  padding-left: 1.56rem;
+  padding-right: 1.50rem;
+ }
+ @include respond(xs){
+  padding-top: 0.88rem;
+  padding-left: 0.94rem;
+  padding-right: 0.88rem;
+ }
+}
+
+.header-wrap-bg{
+ @include respond(big-desktop){
+  max-width: 120rem;
+  margin: 0 auto;
+ }
+ @include respond(mid-desktop){
+  height: 9.38rem;
+ }
+ @include respond(tab-port){
+  height: 29.44rem;
+ }
+ @include respond(xs){
+  height: 25.75rem;
+ }
+}
+
+
+.header-violet{
+  background: linear-gradient(
+  rgba(109, 0, 255, 0.6),
+  rgba(109, 0, 255, 0.24),
+  rgba(109, 0, 255, 0));
+  color: white;
+}
+
+.header-transparent{
+  background: transparent;
+}
+
+

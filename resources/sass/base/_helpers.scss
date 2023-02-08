@@ -47,7 +47,13 @@
 }
 
 
-.item-hidden{
+/**
+ * HELPERS FOR
+ * STORIES PAGE
+ * HOVER EFFECTS
+ */
+ 
+ .item-hidden{
   display: none;
 }
 
@@ -95,7 +101,7 @@
   }
 }
 
-//grid sistem for stories
+// grid sistem for stories hover effects helpers
 .item-container-first{
   width: 50%;
   height: 100%;
@@ -148,5 +154,23 @@
   }
   100%{
     opacity: 1;
+  }
+}
+
+/**
+ * END OF HELPERS HOVER EFFECTS ON stories 
+ */
+
+
+//social bar
+.social-bar{
+  &__single-social{
+      border-radius: 27px;
+      border-width: 3px;
+      border-style: solid;
+      border-color: $bright-violet;
+      color: $bright-violet; 
+      padding:  7px 15px;
+      display: inline-block;
   }
 }

@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
     // search animation
     const searchLabel = $('.custom-form label');
     const searchInput = $('.custom-form input');
+    const cstForm = $('.custom-form');
     const navMenuExcept = $('.site-header .main-navigation .main-navigation__container .main-navigation__container--menu-items .nav-menu ul li').not('li:nth-child(4)');
 
     var clicked = false;
@@ -13,6 +14,7 @@ jQuery(document).ready(function($){
         }    
         searchLabel.toggleClass('active-input hidden-input');
         searchInput.toggleClass('active-input hidden-input');
+        cstForm.addClass('custom-form-distance')
         if ((searchLabel && searchInput).hasClass('active-input')) {
             navMenuExcept.removeClass('active');
             navMenuExcept.addClass('hidden');
@@ -63,7 +65,7 @@ jQuery(document).ready(function($){
         pageStoriesContainer.each(function(e) {
             $( this ).hover(
                 function() {
-                    $( this ).removeClass( "hidde-hover-stories" );
+                    $( this ).removeClass( "hidden-hover-stories" );
                     $( this ).addClass( "hover-stories" );
                     myColorData = $( this ).children().children("span").data();
                     myColorDataString = myColorData.color;
@@ -89,5 +91,8 @@ jQuery(document).ready(function($){
                 }
               );
           });
+
+
+          
 
 });

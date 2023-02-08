@@ -101,7 +101,7 @@ function MR_custom_post_stories() {
 	  'not_found'          => __( 'Nessuna story trovata', 'stories' ),
 	  'not_found_in_trash' => __( 'Nessuna story trovata nel cestino', 'stories' ), 
     'parent_item_colon'  => '',
-    'menu_name'          => 'Story'
+    'menu_name'          => 'Stories'
   );
   $args = array(
     'labels'        => $labels,
@@ -110,9 +110,8 @@ function MR_custom_post_stories() {
 	'exclude_from_search' => false,
     'menu_position' => 8,
     // 'supports'      => array( 'title', 'thumbnail','custom-fields' ),
-    'supports'      => array( 'title', 'thumbnail'),
+    'supports'      => array( 'title', 'thumbnail'), 
     'has_archive'   => true,
-    'exclude_from_search' => FALSE,
 	'menu_icon'		=> 'dashicons-awards',
 	// 'capabilities' => array(
 	// 			'edit_post'	 => "edit_stories",

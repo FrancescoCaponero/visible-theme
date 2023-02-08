@@ -84,6 +84,10 @@ function MR_taxonomy_Discoverall() {
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
+	'show_ui' => true,
+	'show_admin_column' => true,
+	'query_var' => true,
+	'show_in_nav_menus' => true,
   );
 
   register_taxonomy( 'Discover All', array('fellowship', 'parliaments', 'projects', 'spotlight', 'stories'), $args );
