@@ -41,9 +41,27 @@
         bottom: 0;
         left: 0;
         display: flex;
+        @include respond(tab-port){
+            width: 100vw;
+        }
         /* a{
             .blk-btn{}
         } */
+        .spotlight-wrap{
+            display: flex;
+            @include respond(tab-port){
+                flex-direction: column;
+
+            }
+        }
+        .blk-btn{
+            @include respond(tab-port){
+                height: 5.56rem;
+            }
+            @include respond(xs){
+                height: 7.25rem;
+            }
+        }
         &__txt-and-img{
             background-color: $bright-violet;
             display: flex;
@@ -52,6 +70,13 @@
             padding: 0 1.063rem 0 0.256rem;
             width: 32.563rem;
             height: 4.125rem;
+            @include respond(tab-port){
+                height: 5.56rem;
+            }
+            @include respond(xs){
+                height: 7.25rem;
+            }
+            
             &--img{
                 width: 150px;
                 height: 50px;
@@ -65,12 +90,21 @@
                 p{
                     font-size: $p-CG-size;
                 }
+                @include respond(tab-port){
+                    display: flex;
+                    flex-direction: column;
+                }
             }
             button{
                 align-self: flex-end;
                 white-space: nowrap;
                 margin-left: 2.125rem;
                 padding-bottom: 0.688rem;
+                @include respond(tab-port){
+                    align-self: flex-start;
+                    margin-left: 1.438rem;
+
+                }
                 
             }
         }

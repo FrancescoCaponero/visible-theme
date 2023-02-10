@@ -33,7 +33,7 @@
 			<nav id="site-navigation" class="main-navigation nav-padding">
 				<div class="main-navigation__container">
 					<a class="main-navigation__container--logo-link" href="<?php echo home_url(); ?>">
-						<svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="110" height="32" viewBox="0 0 110 32"  fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_1062_6908)">
 							<path d="M8.83605 31.3513H0V9.57812H4.41868V26.9975H8.83736V31.3526L8.83605 31.3513ZM13.2547 26.9962H8.83605V22.641H13.2547V26.9962ZM13.2547 18.2872V9.57812H17.6734V18.2872H13.2547Z" />
 							<path d="M30.549 13.0606H27.4562V22.2056H24.3634V31.3507H18.1777V25.254H21.2705V19.1573H24.3634V13.0606H21.2705V10.0122H30.549V13.0606ZM27.4562 3.91554H30.549V0.867188H33.6418V3.91554H30.549V6.96389H27.4562V3.91554Z" />
@@ -50,7 +50,7 @@
 						</defs>
 						</svg>
 					</a>
-					<div class="main-navigation__container--menu-items">
+					<div class="main-navigation__container--menu-items nav-typo">
 						<?php
 						$page = get_page_by_title('Home');
 						$page2 = get_page_by_title('Spotlight');
@@ -67,6 +67,8 @@
 						<?php get_search_form(); ?>
 						</div>
 					</div>
+					<div class="menu-toggle">
+					</div>	
 				</div>
 			</nav><!-- #site-navigation -->
 		</header>

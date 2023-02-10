@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains Home helper classes for Home
+// -----------------------------------------------------------------------------
+
+.footer-padding{
+  @include respond(big-desktop){
+    padding-top: 1.58rem;
+    padding-right: 5rem;
+    padding-bottom: 2.8rem;
+    padding-left: 2.45rem;
+   }
+   @include respond(mid-desktop){
+    padding-top: 1.81rem;
+    padding-right: 3.75rem;
+    padding-bottom: 1.56rem;
+    padding-left: 1.81rem;
+   }
+   @include respond(tab-port){
+    padding-top: 2rem;
+    padding-right: 5.69rem;
+    padding-bottom: 1.19rem;
+    padding-left: 1.56rem;
+   }
+   @include respond(xs){
+    padding-top: 1.25rem;
+    padding-right: 0.8rem;
+    padding-bottom: 1.25rem;
+    padding-left: 0.94rem;
+   }
+}
+
+.logo-footer-vis-margin-bottom{
+  margin-bottom: 0.19rem;
+}
+
+.footer-left__copyright-claim--text{
+  @include respond(xs){
+    display: none;
+  }
+}
+
+.footer-left__copyright-appear-sm{
+  @include respond(min-xs){
+    display: none;
+  }
+  @include respond(xs){
+    display: block;
+  }
+}
+
+.footer-logos-claim-margin{
+  @include respond(big-desktop){
+    margin-top: 1.25rem;
+  }
+  @include respond(mid-desktop){
+    margin-top: 0.9rem;
+  }
+  @include respond(tab-port){
+    margin-top: 1.88rem;
+  }
+  @include respond(xs){
+    margin-top: 5.44rem;
+  }
+}
+
+.footer-logos-logo-margin{
+  @include respond(big-desktop){
+    margin-top: 7.58rem;
+  }
+  @include respond(mid-desktop){
+    margin-top: 5.68rem;
+  }
+  @include respond(tab-port){
+    margin-top: 11.17rem;
+  }
+  @include respond(xs){
+    margin-top: 4.75rem;
+  }
+}
+.footer-logos-logos-margin-right{
+  @include respond(big-desktop){
+    margin-right: 4.43rem;
+  }
+  @include respond(mid-desktop){
+    margin-right: 3.31rem;
+  }
+  @include respond(tab-port){
+    margin-right: 1.06rem;
+  }
+}
+.footer-logos-logos-margin-bottom{
+  @include respond(xs){
+    margin-bottom: 5.44rem;
+  }
+}
+
+.footer-social-pad-xs{
+  @include respond(xs){
+    padding-right: 2.8rem;
+  }
+}

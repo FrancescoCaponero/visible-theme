@@ -23,15 +23,20 @@ jQuery(document).ready(function($){
             navMenuExcept.removeClass('hidden');
             navMenuExcept.addClass('active');
         }
-    
       });
 
+
+      $('.menu-toggle').click(function() {
+        $('.menu-toggle').toggleClass('active');
+        $('.main-navigation').toggleClass('active-menu');
+        
+      });
     
 
     //event listener for home select options
     var currentURL = window.location.href;
 
-    if (currentURL === "http://localhost:8888/www/") {
+    if (currentURL === "http://localhost:8888/www/Visible/") {
         $("#go-to-permalink").click(function() {
             window.location = $(".page-home__select").val();
         });

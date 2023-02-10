@@ -35,9 +35,7 @@
         <div class="spotlight-btn-and-post">
         
             <button class='blk-btn'>
-                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'spotlight' ) ) ); ?>">
-                Discover All Spotlights
-            </a>
+                <a class="footer-basic-typo" href="<?php echo esc_url( get_permalink( get_page_by_title( 'spotlight' ) ) ); ?>">Discover All Spotlights</a>
             </button>
         
         <?php
@@ -56,14 +54,17 @@
                 $images = rwmb_meta( 'image-spotlight', ['size' => 'large'] );
                 $image = reset( $images );
                 ?>
-                <div class="spotlight-btn-and-post__txt-and-img">
+                <div class="spotlight-btn-and-post__txt-and-img footer-basic-typo">
                     <div class="spotlight-btn-and-post__txt-and-img--img">  
                         <img src="<?= $image['url']; ?>">
-                    </div>       
-                    <p class="spotlight-btn-and-post__txt-and-img--txt"> <?php the_title(); ?> </p>
-                    <button class="read-more-btn-white">
-                        <a href="<?php the_permalink(); ?>">Read More</a>
-                    </button>
+                    </div>      
+                     <div class="spotlight-wrap">
+                         <p class="spotlight-btn-and-post__txt-and-img--txt"> <?php the_title(); ?> </p>
+                        <button class="read-more-btn-white">
+                          <a class="footer-basic-typo" href="<?php the_permalink(); ?>">Read More</a>
+                        </button>
+                     </div>
+                   
                 </div>
                 
                 <?php

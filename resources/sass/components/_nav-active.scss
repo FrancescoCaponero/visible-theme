@@ -1,0 +1,46 @@
+.header-transparent,
+.header-violet{
+	.main-navigation {
+	transition: all .3s ease-in-out;
+	position: relative;
+		&.active-menu {
+			background-color: $nav-ham-menu-color-active;
+			height: 100vh;
+
+			.main-navigation__container{
+				@include respond(tab-port){
+					display: flex;
+					align-items: flex-start;
+				}
+			}
+			.nav-menu{
+				@include respond(tab-port){
+					position: absolute;
+					left: 1.50rem;
+					top: 8.1rem;
+				}
+				@include respond(xs){
+					position: absolute;
+					left: calc(1.50rem / 2);
+					top: 5.7rem;
+				}
+				ul{
+					@include respond(tab-port){
+						display: flex;
+						flex-direction: column;
+						gap: 2.19rem;
+					}
+				}
+			}
+			svg{
+				g{
+					path{
+						fill: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+

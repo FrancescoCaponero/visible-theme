@@ -1,0 +1,52 @@
+/**
+ * Basic typography style for copy text
+ */
+
+ //seen thou art font
+
+ .seen-art-typo{
+    font-style: italic;
+   font-size: $seen-fs;
+   font-weight: $seen-fw;
+   line-height: $seen-lh;
+}
+
+.footer-typo-text{
+    @include respond(big-desktop){
+        font-size: $footer-text-bg-tab-fs;
+        line-height: $footer-text-bg-tab-lh;
+        font-weight: $footer-text-bg-tab-wh;
+    }
+    @include respond(mid-desktop){
+        font-size: $footer-text-bg-tab-fs;
+        line-height: $footer-text-bg-tab-lh;
+        font-weight: $footer-text-bg-tab-wh;
+    }
+    @include respond(tab-port){
+        font-size: $footer-text-bg-tab-fs;
+        line-height: $footer-text-bg-tab-lh;
+        font-weight: $footer-text-bg-tab-wh;
+    }
+    @include respond(xs){
+        font-size: $footer-text-sm-fs;
+        line-height: $footer-text-sm-lh;
+        font-weight: $footer-text-sm-wh;
+    }
+}
+
+
+.footer-copyright-typo{
+    font-size: $footer-copy-sm-fs;
+    line-height: $footer-copy-sm-lh;
+    font-weight: $footer-copy-sm-wh;
+}
+
+//14fs 18lh 400vh
+.footer-basic-typo{
+    font-size: $footer-basic-sm-fs;
+    line-height: $footer-basic-sm-lh;
+    font-weight: $footer-basic-sm-wh;
+}
+
+ 
+

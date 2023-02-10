@@ -1,21 +1,27 @@
-    .header-violet{
+    .header-transparent{
         .main-navigation{
-            color: white;
+            color: black;
             &__container{
                 &--logo-link{
                     svg{
                         g{
                             path{
-                                fill: white;
+                                fill: black;
                             }
                         }
                     }
                 }
                 &--menu-items{
+                    .menu-toggle{
+                        color: black;
+                        &.active{
+                            color: black
+                        }
+                    }
                     .nav-menu{
                         ul{
                             li{
-                                @include a-animation-white;
+                                @include a-animation-black;
                             }
                         }
                     }
@@ -27,12 +33,10 @@
                 button{
                     svg{
                         circle,line{
-                            stroke: white;
+                            stroke: black;
                         }
                     }
                 }
             }
         }
     }
-
-

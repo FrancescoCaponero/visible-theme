@@ -4,7 +4,9 @@
 @import
   'abstracts/header-requirements',
   'abstracts/viewports',
-  'abstracts/variables',
+  'abstracts/variables-colors',
+  'abstracts/variables-fonts',
+  'abstracts/variables-distances',
   'abstracts/functions',
   'abstracts/mixins';
 
@@ -17,15 +19,19 @@
   'base/base',
   'base/fonts',
   'base/typography',
+  'base/typography-header',
+  'base/typography-footer',
+  'base/typography-home',
   'base/header-classes',
   'base/home-classes',
+  'base/footer-classes',
   'base/helpers';
 
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/header-white',
-  'layout/header-black',
+  'layout/header-violet',
+  'layout/header-transparent',
   'layout/footer',
   'layout/hero-section';
 
@@ -33,6 +39,8 @@
 @import
   'components/button',
   'components/searchform',
+  'components/ham-menu',
+  'components/nav-active',
   'components/taxonomies';
 
 // 6. Page-specific styles

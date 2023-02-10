@@ -1,0 +1,29 @@
+/**
+ * Basic typography style for copy text
+ */
+
+
+//typo nav
+
+.nav-typo{
+    @include respond(big-desktop){
+        font-size: $nav-big-fs;
+        line-height: $nav-big-lh;
+        font-weight: $nav-big-wh;
+    }
+    @include respond(mid-desktop){
+        font-size: $nav-big-fs;
+        line-height: $nav-big-lh;
+        font-weight: $nav-big-wh;
+    }
+    @include respond(tab-port){
+        font-size: $nav-tab-fs;
+        line-height: $nav-tab-lh;
+        font-weight: $nav-tab-wh;
+    }
+    @include respond(xs){
+        font-size: $nav-sm-fs;
+        line-height: $nav-sm-lh;
+        font-weight: $nav-sm-wh;
+    }
+}

@@ -3,22 +3,22 @@
 // -----------------------------------------------------------------------------
 
 footer{
-    background-color: $blueish-color;
+    background-color: $footer-background-color;
     .main-footer{
         display: flex;
         justify-content: space-between;
-        width: 100vw;
-        padding: 1.188rem 1.536rem 2.5rem 1.938rem;
         max-width: 120rem;
         margin: 0 auto;
+        @include respond(xs){
+            flex-direction: column;
+        }
         .footer-left{
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             &__logo{
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 5.784rem;
-
                 svg{
                     g{
                         path{
@@ -26,27 +26,13 @@ footer{
                         }
                     }
                 }
-                h3{
-                    font-size: $H3-R50ita-size;
-                    font-style: italic;
-                    font-weight: 300;
-                }
             }
             &__copyright-claim{
                 &--logos{
                     display: flex;
-                    svg{
-                    &:first-child{
-                        margin-right: 3.308rem;
-                    }   
-                    }
-                    
                 }
                 &--text{
-                    color: $black-main-color;
-                    opacity: .25;
-                    font-size: $nav-menu-R50-size;
-                    margin-top: 0.934rem;
+                    color: $footer-copy-color;
                 }
             
             }
@@ -55,6 +41,18 @@ footer{
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            @include respond(big-desktop){
+                gap: 18.92rem;
+               }
+            @include respond(mid-desktop){
+                gap: 14.19rem;
+               }
+               @include respond(tab-port){
+                gap: 4.56rem;
+               }
+               @include respond(xs){
+                gap: inherit;
+               }
             &__menu{
                 .nav-menu{
                     ul{
@@ -68,7 +66,6 @@ footer{
                 }
             }
             &__social-bar{
-                margin-left: 14.188rem;
                 ul{
                     display: flex;
                     flex-direction: column;
@@ -76,9 +73,14 @@ footer{
                     li{
                         @include a-animation-black;
                     }
-
+                    @include respond(xs){
+                        color: $footer-social-color;
+                    }
                 }
             }
         }
+    }
+    .footer-left__copyright-appear-sm{
+        color: $footer-copy-color;
     }
 }

@@ -1,0 +1,51 @@
+/**
+ * Basic typography style for copy text
+ */
+
+
+ // Typo central hero home
+ .hero-home-central-font-black{
+    
+    @include respond(big-desktop){
+        font-size: $visible-big-fs;
+        line-height: $visible-big-lh;
+        font-weight: $visible-big-wh;
+    }
+    @include respond(mid-desktop){
+        font-size: $visible-big-fs;
+        line-height: $visible-big-lh;
+        font-weight: $visible-big-wh;
+    }
+    @include respond(tab-port){
+        font-size: $visible-tab-fs;
+        line-height: $visible-tab-lh;
+        font-weight: $visible-tab-wh;
+    }
+    @include respond(xs){
+        font-size: $visible-sm-fs;
+        line-height: $visible-sm-lh;
+        font-weight: $visible-sm-wh;
+    }
+    span{
+        @include respond(big-desktop){
+            font-size: $climate-big-fs;
+            line-height: $climate-big-lh;
+            font-weight: $climate-big-wh;
+        }
+        @include respond(mid-desktop){
+            font-size: $climate-big-fs;
+            line-height: $climate-big-lh;
+            font-weight: $climate-big-wh;
+        }
+        @include respond(tab-port){
+            font-size: $climate-tab-fs;
+            line-height: $climate-tab-lh;
+            font-weight: $climate-tab-wh;
+        }
+        @include respond(xs){
+            font-size: $climate-sm-fs;
+            line-height: $climate-sm-lh;
+            font-weight: $climate-sm-wh;
+        }
+    }
+ }

@@ -1,0 +1,63 @@
+$buttonWidth: 1.88rem;
+$buttonHeight: 1.25rem;
+$lineThickness: 0.2rem;
+
+.menu-toggle {
+	cursor: pointer;
+	position: relative;
+	display: none;
+	width: $buttonWidth;
+	height: $buttonHeight;
+	
+	background: transparent;
+	border-top: $lineThickness solid;
+	border-bottom: $lineThickness solid;
+	
+	font-size: 0;
+	
+	transition: all .25s ease-in-out;
+	transform: translateX(-50%);
+	
+
+    @include respond(tab-port){
+        display: block;
+    }
+	&:before,
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: $lineThickness;
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+        border-radius: 0.3rem;
+		
+		background: currentColor;
+		
+		transform: translate(-50%, -50%);
+		transition: transform .25s ease-in-out;
+		backface-visibility: hidden;
+
+	}
+	&.active {
+		border-color: transparent;
+		backface-visibility: hidden;
+		height: calc($buttonHeight * 1.5);
+	
+		&:before {
+			transform: translate(-50%, -50%) rotate(45deg);
+			backface-visibility: hidden;
+
+		}
+	
+		&:after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+			backface-visibility: hidden;
+
+		}
+	}
+
+}
