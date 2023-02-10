@@ -8,6 +8,8 @@
         transition: all .3s ease-in-out;
         border-bottom: 2px solid white;
         width: 17.9rem;
+        margin-right: 2.8rem;
+
     }
     .hidden-input{
         opacity: 0;
@@ -22,7 +24,6 @@
         transition: all .2s ease-in-out;
 
         input{
-            margin-right: 2.8rem;
             background-color: transparent;
             position: relative;
             transition: all .3s ease-in-out;

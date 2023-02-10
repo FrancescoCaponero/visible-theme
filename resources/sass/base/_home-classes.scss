@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains Home helper classes for Home
+// -----------------------------------------------------------------------------
+
+.white-box-dimension{
+  border-radius: 0.28rem;
+  @include respond(big-desktop){
+    width: 56.75rem;
+    height: 5.42rem;
+   }
+   @include respond(mid-desktop){
+    width: 42.56rem;
+    height: 4.06rem;
+   }
+   @include respond(tab-port){
+    width: 35.81rem;
+    height: 3.75rem;
+   }
+   @include respond(xs){
+    width: 16rem;
+    height: 2.5rem;
+   }
+}
+
+.violet-top-box-dimension{
+  border-radius: 0.28rem;
+  @include respond(big-desktop){
+    width: 19.17rem;
+    height: 5.42rem;
+   }
+   @include respond(mid-desktop){
+    width: 14.38rem;
+    height: 4.06rem;
+   }
+   @include respond(tab-port){
+    width: 14.38rem;
+    height: 4.06rem;
+   }
+   @include respond(xs){
+    width: 10.19rem;
+    height: 2.5rem;
+   }
+}

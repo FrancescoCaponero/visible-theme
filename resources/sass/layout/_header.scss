@@ -23,28 +23,28 @@
                             list-style-type: none;
                             
                             &:first-child{
-                                margin-right: $mid-ds-menu;
+                                margin-right: $short-ds-menu;
                             }
                             &:nth-child(2){
-                                margin-right: $mid-ds-menu;
+                                margin-right: $short-ds-menu;
                             }
                             &:nth-child(3){
                                 margin-right: $shorter-ds-menu;
                             }
                             &:nth-child(4){
-                                margin-right: $long-ds-menu;
+                                margin-right: $big-ds-menu;
                             }
                             &:nth-child(5){
-                                margin-right: $long-ds-menu;
+                                margin-right: $medium-ds-menu;
                             }
                             &:nth-child(6){
-                                margin-right: $long-ds-menu;
+                                margin-right: $medium-ds-menu;
                             }
                             &:nth-child(7){
-                                margin-right: $long-ds-menu;
+                                margin-right: $medium-ds-menu;
                             }
                             &:last-child{
-                                margin-right: $mid-ds-menu;
+                                margin-right: $short-ds-menu;
                             }
                             
                         }

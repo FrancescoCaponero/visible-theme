@@ -12,7 +12,7 @@
         <div class="container-page-home__img-container">
             <img src="">
         </div>
-		<article class="page-home">
+		<article class="wrapper-text-select-page-home white-box-dimension">
             <h3 class="hero-home-central-font-black">visible is <span>
             <select class="page-home__select">
             <?php
@@ -31,7 +31,7 @@
           </select>
         </span>seen through art</h3>
 		</article>
-        <button class='vlet-btn' type="button" id="go-to-permalink">go to the story</button>
+        <button class='vlet-btn violet-top-box-dimension' type="button" id="go-to-permalink">go to the story</button>
         <div class="spotlight-btn-and-post">
         
             <button class='blk-btn'>
