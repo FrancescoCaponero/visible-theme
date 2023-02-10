@@ -8,6 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond(tab-port){
+        flex-direction: column;
+    }
     &__img-container{
         width: 100vw;
         height: 100vh;
@@ -30,10 +33,43 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &__select{
+        @include respond(tab-port){
+            margin-bottom: 1.25rem;
+        }
+        @include respond(xs){
+            background-color: inherit;
+            padding: inherit;
+        }
+        h3{
+            @include respond(xs){
+                color: white;
+            }
+            span{
+                &:nth-child(1){
+                    @include respond(xs){
+                        margin-bottom: 1.13rem;
+                    }
+                }
+                &:nth-child(3){
+                    @include respond(xs){
+                        margin-top: 0.56rem;
+                    }
+                }
+            }
+        }
+        select{
             color: $bright-violet;
             border: none;
             position: relative;
+            border-radius: 4.5px;
+            @include respond(tab-port){
+                width: 11.7rem;
+            }
+            @include respond(xs){
+                padding: 0rem 2.75rem;
+                width: 15.88rem;
+                height: 2.5rem;
+            }
         }
     }
     .spotlight-btn-and-post{

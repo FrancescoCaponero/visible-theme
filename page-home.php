@@ -13,7 +13,7 @@
             <img src="">
         </div>
 		<article class="wrapper-text-select-page-home white-box-dimension">
-            <h3 class="hero-home-central-font-black">visible is <span>
+            <h3 class="hero-home-central-font-black"><span>visible is </span><span>
             <select class="page-home__select">
             <?php
             if ( $cpt_posts->have_posts() ) {
@@ -29,7 +29,7 @@
             }
             ?>
           </select>
-        </span>seen through art</h3>
+        </span><span>seen through art</span></h3>
 		</article>
         <button class='vlet-btn violet-top-box-dimension' type="button" id="go-to-permalink">go to the story</button>
         <div class="spotlight-btn-and-post">
